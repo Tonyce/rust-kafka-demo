@@ -8,7 +8,8 @@ edition = "2018"
 
 [dependencies]
 tokio = { version = "1.0.1", features = ["full"] }
-rdkafka = { git = "https://github.com/fede1024/rust-rdkafka", features = ["dynamic_linking"] }
+# rdkafka = { git = "https://github.com/fede1024/rust-rdkafka", features = ["dynamic-linking"] }
+rdkafka = { git = "https://github.com/fede1024/rust-rdkafka", features = ["cmake-build"] }
 clap = "2.33.3"
 log = "0.4.11"
 pkg-config = "0.3.19"

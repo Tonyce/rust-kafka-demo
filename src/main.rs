@@ -2,9 +2,9 @@
 //     let librdkafka_version = "1.5.3";
 
 //     let pkg_probe = pkg_config::Config::new()
-//             .cargo_metadata(true)
-//             .atleast_version(librdkafka_version)
-//             .probe("rdkafka");
+//         .cargo_metadata(true)
+//         .atleast_version(librdkafka_version)
+//         .probe("rdkafka");
 //     match pkg_probe {
 //         Ok(library) => {
 //             eprintln!("librdkafka found on the system:");
@@ -13,7 +13,7 @@
 //             eprintln!("  Version: {}", library.version);
 //         }
 //         Err(e) => {
-//             eprintln!("--- {}", e);
+//             eprintln!("--- {:#}", e);
 //             eprintln!(
 //                 "librdkafka {} cannot be found on the system",
 //                 librdkafka_version
@@ -111,7 +111,6 @@ async fn consume_and_print(brokers: &str, group_id: &str, topics: &[&str]) {
 
 #[tokio::main]
 async fn main() {
-
     let matches = App::new("consumer example")
         .version(option_env!("CARGO_PKG_VERSION").unwrap_or(""))
         .about("Simple command line consumer")
